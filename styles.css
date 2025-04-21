@@ -72,7 +72,7 @@ body {
 }
 
 .admin-login-link:hover {
-    color: white;
+    color: ;
     text-decoration: underline;
 }
 
@@ -86,7 +86,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--midnight-blue);
-    color: white;
+    color: ;
     border: none;
     padding: 8px 12px;
     border-radius: 6px;
@@ -121,13 +121,13 @@ body {
 .btn-icon {
     width: 18px;
     height: 18px;
-    filter: brightness(0) invert(1); /* Make icon white */
+    /* filter: brightness(0) invert(1);  Make icon white */
 }
 
 .tool-svg-icon {
     width: 28px;
     height: 28px;
-    filter: brightness(0) invert(1); /* Make icon white */
+    /* filter: brightness(0) invert(1); Make icon white */
 }
 
 .preview-icon {
