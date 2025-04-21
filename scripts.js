@@ -253,7 +253,7 @@ function renderDashboard() {
         
         const iconDiv = document.createElement('div');
         iconDiv.className = 'tool-icon';
-        iconDiv.style.backgroundColor = tool.color;
+        // iconDiv.style.backgroundColor = tool.color;
         
         // Create IMG element for SVG
         const iconSvg = document.createElement('img');
