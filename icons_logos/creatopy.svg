@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.14 52.77">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        mask: url(#mask);
+      }
+
+      .cls-3 {
+        fill: #ccc;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <mask id="mask" x="0" y="-8.89" width="62.27" height="70.56" maskUnits="userSpaceOnUse">
+      <g id="mask0">
+        <path class="cls-1" d="M26.69,44.23c9.9,0,17.92-7.99,17.92-17.85s-8.02-17.85-17.92-17.85V-8.89h.16c19.56,0,35.42,15.8,35.42,35.28h0c0,19.48-15.86,35.28-35.42,35.28h-.16v-17.43Z"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient" x1="-860.86" y1="-113.66" x2="-808.09" y2="-113.66" gradientTransform="translate(-87.09 -808.09) rotate(-90) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cf0"/>
+      <stop offset="1" stop-color="#6ff"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-3" d="M18.4,26.39c0-4.56,3.71-8.25,8.29-8.25v-9.59c-9.9,0-17.92,7.99-17.92,17.85s8.02,17.85,17.92,17.85v-9.59c-4.58,0-8.29-3.7-8.29-8.25Z"/>
+  <g class="cls-2">
+    <ellipse class="cls-4" cx="26.57" cy="26.39" rx="26.57" ry="26.39"/>
+  </g>
+</svg>
