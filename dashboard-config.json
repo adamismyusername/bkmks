@@ -1,0 +1,100 @@
+{
+  "toolsData": [
+    {
+      "id": 5,
+      "icon": "attach_money",
+      "title": "Salesforce",
+      "description": "Goldco's main CRM for leads, campaigns, and sales",
+      "url": "https://goldco.my.salesforce.com/home/home.jsp",
+      "color": "var(--nephritis)"
+    },
+    {
+      "id": 22,
+      "icon": "view_timeline",
+      "title": "Monday.com",
+      "description": "Project Manager for Goldco",
+      "url": "https://goldco-force.monday.com/",
+      "color": "var(--wisteria)"
+    },
+    {
+      "id": 8,
+      "icon": "bar_chart",
+      "title": "Unbounce",
+      "description": "This is where most of Goldco's landing pages are hosted",
+      "url": "https://app.unbounce.com/5598866/pages",
+      "color": "var(--belize-hole)"
+    },
+    {
+      "id": 26,
+      "icon": "integration_instructions",
+      "title": "Google | Sheets",
+      "description": "",
+      "url": "https://docs.google.com/spreadsheets/u/0/?tgif=c",
+      "color": "var(--nephritis)"
+    },
+    {
+      "id": 33,
+      "icon": "campaign",
+      "title": "Salesforce MC",
+      "description": "Salesforce Marketing Cloud (SFMC) main marketing platform",
+      "url": "https://mck3qzddmyzrqj4h3nxgbgq76y90.login.exacttarget.com/hub-cas/login",
+      "color": "var(--nephritis)"
+    },
+    {
+      "id": 24,
+      "icon": "drafts",
+      "title": "BeeFree Pro",
+      "description": "Drag and drop editor for email design, layout, and coding",
+      "url": "https://beefree.io/app/590652/572321/projects",
+      "color": "var(--amethyst)"
+    },
+    {
+      "id": 14,
+      "icon": "add_to_drive",
+      "title": "Google Drive",
+      "description": "Quick link to Google Drive",
+      "url": "https://drive.google.com/drive/home",
+      "color": "var(--wisteria)"
+    },
+    {
+      "id": 16,
+      "icon": "folder",
+      "title": "Creatopy",
+      "description": "An app that can quickly create multiple sizes, layouts and versions of banner ads",
+      "url": "https://auth.creatopy.com/auth/realms/creatopy/protocol/openid-connect/auth",
+      "color": "var(--belize-hole)"
+    },
+    {
+      "id": 15,
+      "icon": "groups",
+      "title": "Temporary Phone #'s",
+      "description": "Get a temporary phone number for testing landing pages and text messages",
+      "url": "https://temp-number.com/countries/United-States",
+      "color": "var(--midnight-blue)"
+    },
+    {
+      "id": 2,
+      "icon": "html",
+      "title": "Creative Generator (v1)",
+      "description": "Automatically generate creatives with proper tracking links",
+      "url": "https://generator.goldcocreatives.com/generate",
+      "color": "var(--turquoise)"
+    },
+    {
+      "id": 1,
+      "icon": "html",
+      "title": "Creative Generator (4 in 1)",
+      "description": "Updates all links in the the 4 in 1 creative with values entered into the form fields. ",
+      "url": "https://adamismyusername.github.io/4in1/",
+      "color": "var(--turquoise)"
+    },
+    {
+      "id": 21,
+      "icon": "important_devices",
+      "title": "Competitors",
+      "description": "A list of competitors, their websites, landing pages and more. *Access requires management approval.",
+      "url": "https://docs.google.com/spreadsheets/d/1if2q4XmGK-f0e1qPWlyOa1vBty-f0s3fCCrqTQhpacg/edit?gid=0#gid=0",
+      "color": "var(--silver)"
+    }
+  ]
+}

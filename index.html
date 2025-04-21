@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Tools Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Add SortableJS for drag and drop functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- New toolbar -->
+    <div class="toolbar">
+        <h1>Marketing Tools Dashboard</h1>
+        <div class="toolbar-actions">
+            <!-- Login link (shown when not logged in) -->
+            <a href="#" id="adminLoginLink" class="admin-login-link">Admin Login</a>
+            
+            <!-- Admin buttons (hidden until logged in) -->
+            <div id="adminControls" class="admin-controls" style="display: none;">
+                <button id="newToolBtn" class="admin-btn">
+                    <span class="material-icons">add</span>
+                    New Tool
+                </button>
+                <button id="saveAllChangesBtn" class="admin-btn primary">
+                    <span class="material-icons">save</span>
+                    Save All Changes
+                </button>
+                <button id="logoutBtn" class="admin-btn secondary">
+                    <span class="material-icons">logout</span>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dashboard-container">
+        <div class="dashboard" id="dashboard">
+            <!-- Tool cards will be added here dynamically -->
+        </div>
+    </div>
+
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <div class="admin-header">
+            <h2 id="adminPanelTitle">Edit Tool</h2>
+            <button id="closeAdmin" class="admin-close-btn">×</button>
+        </div>
+        <div class="admin-content">
+            <div class="admin-form">
+                <div class="form-group">
+                    <label for="toolIcon">Icon:</label>
+                    <input type="text" id="toolIcon" placeholder="Icon name">
+                    <div class="icon-preview">
+                        <span class="material-icons">dashboard</span>
+                        <small>Preview</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="toolTitle">Title:</label>
+                    <input type="text" id="toolTitle" placeholder="Tool Title">
+                </div>
+                <div class="form-group">
+                    <label for="toolDescription">Description:</label>
+                    <textarea id="toolDescription" placeholder="Tool description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="toolLink">Link URL:</label>
+                    <input type="text" id="toolLink" placeholder="https://example.com/tool">
+                </div>
+                <div class="form-group">
+                    <label for="toolColor">Color:</label>
+                    <div class="color-picker" id="colorPicker">
+                        <!-- Color swatches will be added here dynamically -->
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button id="deleteTool" class="admin-save-btn" style="background-color: var(--alizarin); margin-right: auto;">Delete Tool</button>
+                    <button id="saveToolChanges" class="admin-save-btn action-button">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="adminLoginPanel" class="admin-login-panel" style="display: none;">
+        <div class="admin-login-content">
+            <h3>Admin Login</h3>
+            <div class="admin-form">
+                <div class="form-group">
+                    <label for="adminPassword">Password:</label>
+                    <input type="password" id="adminPassword">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="rememberMe" style="width: auto; margin-right: 8px;">
+                    <label for="rememberMe" style="display: inline;">Remember Me</label>
+                </div>
+                <div class="form-actions">
+                    <button id="loginAdmin" class="admin-login-btn">Login</button>
+                    <button id="cancelLogin" class="admin-cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="githubTokenPanel" class="github-token-panel" style="display: none;">
+        <div class="admin-header">
+            <h2>GitHub Configuration</h2>
+            <button id="closeGithubPanel" class="admin-close-btn">×</button>
+        </div>
+        <div class="github-info">
+            <h3>How This Works</h3>
+            <p>This dashboard saves your tool configuration to a JSON file in your GitHub repository. To enable this feature, you'll need to:</p>
+            <ul>
+                <li>Create a GitHub repository (if you don't already have one)</li>
+                <li>Enable GitHub Pages in your repository settings</li>
+                <li>Create a personal access token with repo scope</li>
+            </ul>
+            <p>Your configuration will be stored in a file called <code>dashboard-config.json</code> in your repository.</p>
+        </div>
+        <div class="github-form">
+            <div class="form-group">
+                <label for="githubUsername">GitHub Username:</label>
+                <input type="text" id="githubUsername" placeholder="your-username" value="adamismyusername">
+            </div>
+            <div class="form-group">
+                <label for="githubRepo">Repository Name:</label>
+                <input type="text" id="githubRepo" placeholder="your-repo" value="sfdash">
+            </div>
+            <div class="form-group">
+                <label for="githubToken">Personal Access Token:</label>
+                <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxx">
+                <div class="github-notice">Your token is stored only in your browser's local storage and is never sent to our servers.</div>
+            </div>
+            <div class="form-group">
+                <label for="githubBranch">Branch Name:</label>
+                <input type="text" id="githubBranch" placeholder="main" value="main">
+            </div>
+            <div class="form-actions">
+                <button id="testGithubConnection" class="admin-save-btn action-button">Test Connection</button>
+                <button id="saveGithubSettings" class="admin-save-btn action-button" style="margin-left: 10px;">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="debugToggle" class="debug-toggle" title="Debug Panel">🐞</div>
+    <div id="debugPanel" class="debug-panel"></div>
+
+    <div id="statusMessage" class="status-message"></div>
+
+    <!-- Custom scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
