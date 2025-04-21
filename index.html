@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing Tools Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Removed Google Material Icons -->
     <!-- Add SortableJS for drag and drop functionality -->
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
     <!-- Custom styles -->
@@ -22,15 +22,16 @@
             <!-- Admin buttons (hidden until logged in) -->
             <div id="adminControls" class="admin-controls" style="display: none;">
                 <button id="newToolBtn" class="admin-btn">
-                    <span class="material-icons">add</span>
+                    <!-- SVG icon instead of material icon -->
+                    <img src="icons_logos/add.svg" class="btn-icon" alt="Add">
                     New Tool
                 </button>
                 <button id="saveAllChangesBtn" class="admin-btn primary">
-                    <span class="material-icons">save</span>
+                    <img src="icons_logos/save.svg" class="btn-icon" alt="Save">
                     Save All Changes
                 </button>
                 <button id="logoutBtn" class="admin-btn secondary">
-                    <span class="material-icons">logout</span>
+                    <img src="icons_logos/logout.svg" class="btn-icon" alt="Logout">
                     Logout
                 </button>
             </div>
@@ -51,10 +52,10 @@
         <div class="admin-content">
             <div class="admin-form">
                 <div class="form-group">
-                    <label for="toolIcon">Icon:</label>
-                    <input type="text" id="toolIcon" placeholder="Icon name">
+                    <label for="toolIcon">Icon File:</label>
+                    <input type="text" id="toolIcon" placeholder="filename.svg (from icons_logos folder)">
                     <div class="icon-preview">
-                        <span class="material-icons">dashboard</span>
+                        <img src="icons_logos/dashboard.svg" class="preview-icon" alt="Icon Preview">
                         <small>Preview</small>
                     </div>
                 </div>

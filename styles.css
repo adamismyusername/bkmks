@@ -117,8 +117,22 @@ body {
     background-color: var(--concrete);
 }
 
-.admin-btn .material-icons {
-    font-size: 18px;
+/* New SVG icon styles */
+.btn-icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1); /* Make icon white */
+}
+
+.tool-svg-icon {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1); /* Make icon white */
+}
+
+.preview-icon {
+    width: 24px;
+    height: 24px;
 }
 
 .dashboard-container {
@@ -159,8 +173,9 @@ body {
         font-size: 13px;
     }
     
-    .admin-btn .material-icons {
-        font-size: 16px;
+    .btn-icon {
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -229,10 +244,6 @@ body {
     border-radius: 12px;
     color: white;
     font-size: 24px;
-}
-
-.tool-icon span {
-    font-size: 28px;
 }
 
 .tool-info {
@@ -375,10 +386,6 @@ html, body {
     border-radius: 6px;
 }
 
-.icon-preview .material-icons {
-    font-size: 24px;
-}
-
 .form-actions {
     display: flex;
     justify-content: flex-end;
@@ -462,6 +469,11 @@ html, body {
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 5;
+}
+
+.edit-button img {
+    width: 16px;
+    height: 16px;
 }
 
 .tool-card.admin-mode:hover .edit-button {
@@ -649,13 +661,14 @@ html, body {
     z-index: 5;
 }
 
-.tool-card.admin-mode:hover .drag-handle {
-    opacity: 0.8;
+.drag-handle img {
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
 }
 
-.drag-handle .material-icons {
-    font-size: 16px;
-    color: var(--asbestos);
+.tool-card.admin-mode:hover .drag-handle {
+    opacity: 0.8;
 }
 
 /* Save changes button animation */
@@ -718,4 +731,9 @@ html, body {
     font-size: 20px;
     transition: transform 0.3s;
     color: white;
+}
+
+/* Fix for SVG icon files that might have their own colors */
+.svg-icon-fix {
+    filter: brightness(0) invert(1); /* Makes the icon white */
 }

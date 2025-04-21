@@ -17,14 +17,14 @@ const toolColors = [
     'var(--silver)', 'var(--asbestos)'
 ];
 
-/* Available Material icons */
-const toolIcons = [
+/* Default SVG Icons (filenames without .svg extension) */
+const defaultIcons = [
     'dashboard', 'analytics', 'build', 'code', 'info', 'settings',
-    'pie_chart', 'bar_chart', 'data_usage', 'schedule', 'notifications', 'mail',
-    'chat', 'people', 'groups', 'folder', 'cloud', 'security',
-    'search', 'help', 'important_devices', 'network_check', 'description', 'fact_check',
-    'insights', 'integration_instructions', 'memory', 'pageview', 'storage', 'supervisor_account',
-    'task', 'api', 'cable', 'query_stats', 'devices', 'app_settings_alt'
+    'chart-pie', 'chart-bar', 'data', 'calendar', 'notification', 'email',
+    'chat', 'person', 'group', 'folder', 'cloud', 'security',
+    'search', 'help', 'devices', 'network', 'document', 'check',
+    'insights', 'code-block', 'storage', 'view', 'database', 'user-admin',
+    'task', 'api', 'connection', 'stats', 'device', 'settings-alt'
 ];
 
 /* Global variables */
@@ -190,16 +190,37 @@ function checkAuthToken() {
     return false;
 }
 
+/* Helper function to check if SVG file exists */
+async function checkFileExists(url) {
+    try {
+        const response = await fetch(url, { method: 'HEAD' });
+        return response.ok;
+    } catch (error) {
+        debug('Error checking file existence', { url, error });
+        return false;
+    }
+}
+
+/* Get SVG filename with extension */
+function getSvgFilename(icon) {
+    // If it already has an extension, return it
+    if (icon.toLowerCase().endsWith('.svg')) {
+        return icon;
+    }
+    // Otherwise, add the extension
+    return `${icon}.svg`;
+}
+
 /* Initialize default tools */
 function initializeDefaultTools() {
     debug('Initializing default tools');
     toolsData = [];
     for (let i = 0; i < 36; i++) {
         const colorIndex = i % toolColors.length;
-        const iconIndex = i % toolIcons.length;
+        const iconIndex = i % defaultIcons.length;
         toolsData.push({
             id: i + 1,
-            icon: toolIcons[iconIndex],
+            icon: defaultIcons[iconIndex], // Now using SVG filenames
             title: `Tool ${i+1}`,
             description: `This is a description for Tool ${i+1}. It explains what this tool does and how to use it.`,
             url: '#',
@@ -234,10 +255,12 @@ function renderDashboard() {
         iconDiv.className = 'tool-icon';
         iconDiv.style.backgroundColor = tool.color;
         
-        const icon = document.createElement('span');
-        icon.className = 'material-icons';
-        icon.textContent = tool.icon;
-        iconDiv.appendChild(icon);
+        // Create IMG element for SVG
+        const iconSvg = document.createElement('img');
+        iconSvg.className = 'tool-svg-icon';
+        iconSvg.src = `icons_logos/${getSvgFilename(tool.icon)}`;
+        iconSvg.alt = tool.title;
+        iconDiv.appendChild(iconSvg);
         
         const info = document.createElement('div');
         info.className = 'tool-info';
@@ -256,7 +279,7 @@ function renderDashboard() {
         
         const editButton = document.createElement('div');
         editButton.className = 'edit-button';
-        editButton.innerHTML = '<span class="material-icons" style="font-size: 16px;">edit</span>';
+        editButton.innerHTML = '<img src="icons_logos/edit.svg" alt="Edit" />';
         editButton.addEventListener('click', function(e) {
             e.stopPropagation();
             openEditPanel(tool.id);
@@ -264,7 +287,7 @@ function renderDashboard() {
         
         const dragHandle = document.createElement('div');
         dragHandle.className = 'drag-handle';
-        dragHandle.innerHTML = '<span class="material-icons">drag_indicator</span>';
+        dragHandle.innerHTML = '<img src="icons_logos/drag_indicator.svg" alt="Drag" />';
         
         info.appendChild(title);
         info.appendChild(description);
@@ -352,11 +375,11 @@ function updateSaveChangesButton() {
     if (changesNeedSaving || orderChanged) {
         if (!saveBtn.classList.contains('has-changes')) {
             saveBtn.classList.add('has-changes');
-            saveBtn.innerHTML = '<span class="material-icons">save</span>Save Changes*';
+            saveBtn.innerHTML = '<img src="icons_logos/save.svg" class="btn-icon" alt="Save" />Save Changes*';
         }
     } else {
         saveBtn.classList.remove('has-changes');
-        saveBtn.innerHTML = '<span class="material-icons">save</span>Save All Changes';
+        saveBtn.innerHTML = '<img src="icons_logos/save.svg" class="btn-icon" alt="Save" />Save All Changes';
     }
 }
 
@@ -573,7 +596,7 @@ async function testGitHubConnection() {
             }
         });
 
-        button.textContent = 'Test Connection';
+        button.innerHTML = 'Test Connection';
         button.disabled = false;
 
         if (!response.ok) {
@@ -647,7 +670,7 @@ async function loadConfigFromGitHub() {
     const config = await fetchConfigFromGitHub();
     
     if (button) {
-        button.textContent = 'Save Settings';
+        button.innerHTML = 'Save Settings';
         button.disabled = false;
     }
     
@@ -761,11 +784,12 @@ function openEditPanel(toolId) {
     if (toolId === null) {
         debug('Opening panel to add new tool');
         document.getElementById('adminPanelTitle').textContent = 'Add New Tool';
-        document.getElementById('toolIcon').value = 'dashboard';
+        document.getElementById('toolIcon').value = 'dashboard.svg';
         document.getElementById('toolTitle').value = '';
         document.getElementById('toolDescription').value = '';
         document.getElementById('toolLink').value = '';
         document.getElementById('deleteTool').style.display = 'none';
+        updateIconPreview('dashboard.svg');
         setupColorPicker('var(--turquoise)');
     } else {
         debug('Opening panel to edit tool', { toolId });
@@ -776,11 +800,18 @@ function openEditPanel(toolId) {
         document.getElementById('toolDescription').value = tool.description;
         document.getElementById('toolLink').value = tool.url;
         document.getElementById('deleteTool').style.display = 'inline-block';
+        updateIconPreview(tool.icon);
         setupColorPicker(tool.color);
     }
     
-    document.querySelector('.icon-preview .material-icons').textContent = document.getElementById('toolIcon').value;
     document.getElementById('adminPanel').style.display = 'block';
+}
+
+// Update the icon preview when changing the icon name
+function updateIconPreview(iconName) {
+    const iconPreview = document.querySelector('.preview-icon');
+    iconPreview.src = `icons_logos/${getSvgFilename(iconName)}`;
+    iconPreview.alt = iconName;
 }
 
 function setupColorPicker(selectedColor) {
@@ -1000,7 +1031,7 @@ function setupEventListeners() {
             setTimeout(() => {
                 button.disabled = false;
                 button.classList.remove('saving');
-                button.innerHTML = '<span class="material-icons">save</span>Save All Changes';
+                button.innerHTML = '<img src="icons_logos/save.svg" class="btn-icon" alt="Save" />Save All Changes';
             }, 1000);
         } else {
             showStatusMessage('No changes to save', 'success');
@@ -1022,8 +1053,7 @@ function setupEventListeners() {
     
     // Icon preview
     document.getElementById('toolIcon').addEventListener('input', function() {
-        const previewIcon = document.querySelector('.icon-preview .material-icons');
-        previewIcon.textContent = this.value || 'dashboard';
+        updateIconPreview(this.value);
     });
     
     // Save tool changes
