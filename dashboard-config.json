@@ -118,7 +118,7 @@
           "url": "https://docs.google.com/spreadsheets/d/1fpGm_ZezuaGa2iI9PCkc_Y1WLpNl7XCjSA8Z4H0TGcU/edit?gid=0#gid=0"
         },
         {
-          "title": "Creatives",
+          "title": "Goldco Creatives",
           "url": "https://docs.google.com/spreadsheets/d/1UTGdgonpAwiHKYQ5B9N3zj25DXrRpk4I7zcHmlPuXtk/edit?gid=895709536#gid=895709536"
         },
         {
@@ -314,6 +314,76 @@
         }
       ],
       "order": 8
+    },
+    {
+      "id": 27,
+      "icon": "brain",
+      "title": "AI Tools",
+      "description": "",
+      "url": "#",
+      "color": "var(--midnight-blue)",
+      "order": 9,
+      "quickLinks": [
+        {
+          "title": "Claude",
+          "url": "https://claude.ai/new"
+        },
+        {
+          "title": "Chat GPT",
+          "url": "https://chatgpt.com/"
+        },
+        {
+          "title": "Grok",
+          "url": "https://grok.com/"
+        },
+        {
+          "title": "Affogato (RenderNet)",
+          "url": "https://app.affogato.ai/"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "icon": "google-sheets",
+      "title": "Stock Assets",
+      "description": "",
+      "url": "#",
+      "color": "var(--midnight-blue)",
+      "order": 10,
+      "quickLinks": [
+        {
+          "title": "Adobe Stock",
+          "url": "https://stock.adobe.com/"
+        },
+        {
+          "title": "Emojis",
+          "url": "https://emojicopy.com/"
+        },
+        {
+          "title": "SVG Repo",
+          "url": "https://www.svgrepo.com/"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ]
     }
   ]
 }
