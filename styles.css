@@ -106,7 +106,7 @@ body {
 
 /* Dashboard Layout */
 .dashboard {
-    width: 100%;
+    width: 90%;
     /* max-width: 1440px; */
     margin: 0 auto;
     padding: 0 24px;
