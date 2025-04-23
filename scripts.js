@@ -93,13 +93,15 @@
                         quickLink.className = 'quick-link';
                         quickLink.setAttribute('data-url', link.url);
                         
-                        const linkIcon = document.createElement('span');
-                        linkIcon.className = 'material-icons';
-                        linkIcon.textContent = 'link';
+                        // Use SVG for link icon
+                        const linkIconImg = document.createElement('img');
+                        linkIconImg.src = 'icons_logos/link.svg';
+                        linkIconImg.alt = 'Link';
+                        linkIconImg.className = 'quick-link-icon';
                         
                         const linkText = document.createTextNode(link.title);
                         
-                        quickLink.appendChild(linkIcon);
+                        quickLink.appendChild(linkIconImg);
                         quickLink.appendChild(linkText);
                         
                         // Add click event to the quick link
@@ -125,7 +127,13 @@
             // Edit button (hidden by default)
             const editButton = document.createElement('div');
             editButton.className = 'edit-button';
-            editButton.innerHTML = '<span class="material-icons" style="font-size: 16px;">edit</span>';
+            
+            // Use SVG for edit icon
+            const editIconImg = document.createElement('img');
+            editIconImg.src = 'icons_logos/edit.svg';
+            editIconImg.alt = 'Edit';
+            editButton.appendChild(editIconImg);
+            
             editButton.addEventListener('click', function(e) {
                 e.stopPropagation(); // Prevent the card click event
                 openEditPanel(tool.id);

@@ -167,8 +167,9 @@ h1 {
     text-decoration: underline;
 }
 
-.quick-link .material-icons {
-    font-size: 16px;
+.quick-link-icon {
+    width: 16px;
+    height: 16px;
     margin-right: 6px;
 }
 
@@ -432,6 +433,11 @@ html, body {
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 5;
+}
+
+.edit-button img {
+    width: 16px;
+    height: 16px;
 }
 
 .tool-card.admin-mode:hover .edit-button {
