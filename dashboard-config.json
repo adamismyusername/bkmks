@@ -74,17 +74,17 @@
       "id": 22,
       "icon": "monday",
       "title": "Monday.com",
-      "description": "Project Manager for Goldco",
+      "description": "",
       "url": "https://goldco-force.monday.com/",
-      "color": "var(--wisteria)",
+      "color": "var(--carrot)",
       "quickLinks": [
         {
-          "title": "",
-          "url": ""
+          "title": "ToDo | April 2025",
+          "url": "https://goldco-force.monday.com/overviews/30394525"
         },
         {
-          "title": "",
-          "url": ""
+          "title": "Spend | April 2025",
+          "url": "https://goldco-force.monday.com/overviews/30365721"
         },
         {
           "title": "",
@@ -374,6 +374,41 @@
         {
           "title": "Tint & Shades",
           "url": "https://maketintsandshades.com/"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "icon": "automation",
+      "title": "Automation & Tools",
+      "description": "",
+      "url": "#",
+      "color": "var(--turquoise)",
+      "order": 11,
+      "quickLinks": [
+        {
+          "title": "Zapier",
+          "url": "https://zapier.com/app/assets/zaps"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
         },
         {
           "title": "",
