@@ -2,27 +2,27 @@
   "toolsData": [
     {
       "id": 5,
-      "icon": "salesforce",
-      "title": "Salesforce",
-      "description": "Goldco's main CRM for leads, campaigns, and sales",
-      "url": "https://goldco.my.salesforce.com/home/home.jsp",
-      "color": "var(--nephritis)",
+      "icon": "dashboard",
+      "title": "Leads & Campaigns",
+      "description": "",
+      "url": "#",
+      "color": "var(--green-sea)",
       "quickLinks": [
+        {
+          "title": "Salesforce",
+          "url": "https://goldco.my.salesforce.com/home/home.jsp"
+        },
         {
           "title": "Marketing Cloud",
           "url": "https://mck3qzddmyzrqj4h3nxgbgq76y90.login.exacttarget.com/hub-cas/login"
         },
         {
-          "title": "",
-          "url": ""
+          "title": "Everflow",
+          "url": "https://goldco.everflowclient.io/"
         },
         {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
+          "title": "Campaign Name Tool",
+          "url": "https://kap-tool-campaign-name-generator.tiiny.site/"
         },
         {
           "title": "",
@@ -39,21 +39,21 @@
       "id": 8,
       "icon": "unbounce",
       "title": "Unbounce",
-      "description": "This is where most of Goldco's landing pages are hosted",
+      "description": "",
       "url": "https://app.unbounce.com/5598866/pages",
       "color": "var(--belize-hole)",
       "quickLinks": [
         {
-          "title": "",
-          "url": ""
+          "title": "Video Header",
+          "url": "https://app.unbounce.com/4965941/pages/8e32c647-2fd7-4652-94c9-945e25d5c511/overview"
         },
         {
-          "title": "",
-          "url": ""
+          "title": "Silver Calculator",
+          "url": "https://www.goldcoquiz.com/silver-calculator/"
         },
         {
-          "title": "",
-          "url": ""
+          "title": "Inflation Calculator",
+          "url": "#"
         },
         {
           "title": "",
@@ -177,7 +177,7 @@
     },
     {
       "id": 16,
-      "icon": "dashboard",
+      "icon": "art",
       "title": "Asset Creation",
       "description": "",
       "url": "#",
@@ -317,7 +317,7 @@
     },
     {
       "id": 28,
-      "icon": "files",
+      "icon": "picture",
       "title": "Stock Assets",
       "description": "",
       "url": "#",
