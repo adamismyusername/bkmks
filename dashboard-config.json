@@ -142,27 +142,27 @@
     },
     {
       "id": 14,
-      "icon": "google-drive",
-      "title": "Google Drive",
+      "icon": "google",
+      "title": "Google",
       "description": "Quick link to Google Drive",
       "url": "https://drive.google.com/drive/home",
       "color": "var(--wisteria)",
       "quickLinks": [
         {
-          "title": "",
-          "url": ""
+          "title": "Google Drive",
+          "url": "https://drive.google.com/drive/home"
         },
         {
-          "title": "",
-          "url": ""
+          "title": "Google Gmail",
+          "url": "https://mail.google.com/mail/u/0/#inbox"
         },
         {
-          "title": "",
-          "url": ""
+          "title": "Google Docs",
+          "url": "https://docs.google.com/document/u/0/?tgif=c"
         },
         {
-          "title": "",
-          "url": ""
+          "title": "Google Sheets",
+          "url": "https://docs.google.com/spreadsheets/u/0/?tgif=c"
         },
         {
           "title": "",
