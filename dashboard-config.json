@@ -6,7 +6,7 @@
       "title": "Leads & Campaigns",
       "description": "",
       "url": "#",
-      "color": "var(--green-sea)",
+      "color": "var(--pomegranate)",
       "quickLinks": [
         {
           "title": "Salesforce",
@@ -34,41 +34,6 @@
         }
       ],
       "order": 0
-    },
-    {
-      "id": 8,
-      "icon": "unbounce",
-      "title": "Unbounce",
-      "description": "",
-      "url": "https://app.unbounce.com/5598866/pages",
-      "color": "var(--belize-hole)",
-      "quickLinks": [
-        {
-          "title": "Video Header",
-          "url": "https://app.unbounce.com/4965941/pages/8e32c647-2fd7-4652-94c9-945e25d5c511/overview"
-        },
-        {
-          "title": "Silver Calculator",
-          "url": "https://www.goldcoquiz.com/silver-calculator/"
-        },
-        {
-          "title": "Inflation Calculator",
-          "url": "#"
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        }
-      ],
-      "order": 1
     },
     {
       "id": 22,
@@ -103,77 +68,7 @@
           "url": ""
         }
       ],
-      "order": 2
-    },
-    {
-      "id": 26,
-      "icon": "google-sheets",
-      "title": "Google | Sheets",
-      "description": "",
-      "url": "https://docs.google.com/spreadsheets/u/0/?tgif=c",
-      "color": "var(--nephritis)",
-      "quickLinks": [
-        {
-          "title": "Rainmaker Bookings",
-          "url": "https://docs.google.com/spreadsheets/d/1fpGm_ZezuaGa2iI9PCkc_Y1WLpNl7XCjSA8Z4H0TGcU/edit?gid=0#gid=0"
-        },
-        {
-          "title": "Goldco Creatives",
-          "url": "https://docs.google.com/spreadsheets/d/1UTGdgonpAwiHKYQ5B9N3zj25DXrRpk4I7zcHmlPuXtk/edit?gid=895709536#gid=895709536"
-        },
-        {
-          "title": "A2M Bookings",
-          "url": "https://docs.google.com/spreadsheets/d/16HWgzDICOlN6cz5MUsRMfL6epiuuQIKQ/edit?gid=1192968110#gid=1192968110"
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        }
-      ],
-      "order": 3
-    },
-    {
-      "id": 14,
-      "icon": "google",
-      "title": "Google",
-      "description": "Quick link to Google Drive",
-      "url": "https://drive.google.com/drive/home",
-      "color": "var(--wisteria)",
-      "quickLinks": [
-        {
-          "title": "Google Drive",
-          "url": "https://drive.google.com/drive/home"
-        },
-        {
-          "title": "Google Gmail",
-          "url": "https://mail.google.com/mail/u/0/#inbox"
-        },
-        {
-          "title": "Google Docs",
-          "url": "https://docs.google.com/document/u/0/?tgif=c"
-        },
-        {
-          "title": "Google Sheets",
-          "url": "https://docs.google.com/spreadsheets/u/0/?tgif=c"
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        }
-      ],
-      "order": 4
+      "order": 1
     },
     {
       "id": 16,
@@ -208,77 +103,7 @@
           "url": ""
         }
       ],
-      "order": 5
-    },
-    {
-      "id": 15,
-      "icon": "tools",
-      "title": "Miscellaneous Tools",
-      "description": "",
-      "url": "#",
-      "color": "var(--midnight-blue)",
-      "quickLinks": [
-        {
-          "title": "Temporary Phone #",
-          "url": "https://temp-number.com/countries/United-States"
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        }
-      ],
-      "order": 6
-    },
-    {
-      "id": 21,
-      "icon": "poop",
-      "title": "Competitors",
-      "description": "",
-      "url": "https://docs.google.com/spreadsheets/d/1if2q4XmGK-f0e1qPWlyOa1vBty-f0s3fCCrqTQhpacg/edit?gid=0#gid=0",
-      "color": "var(--silver)",
-      "quickLinks": [
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        }
-      ],
-      "order": 7
+      "order": 2
     },
     {
       "id": 27,
@@ -286,8 +111,8 @@
       "title": "AI Tools",
       "description": "",
       "url": "#",
-      "color": "var(--midnight-blue)",
-      "order": 8,
+      "color": "var(--sunflower)",
+      "order": 3,
       "quickLinks": [
         {
           "title": "Claude",
@@ -316,25 +141,24 @@
       ]
     },
     {
-      "id": 28,
-      "icon": "picture",
-      "title": "Stock Assets",
+      "id": 26,
+      "icon": "google-sheets",
+      "title": "Google | Sheets",
       "description": "",
-      "url": "#",
-      "color": "var(--midnight-blue)",
-      "order": 9,
+      "url": "https://docs.google.com/spreadsheets/u/0/?tgif=c",
+      "color": "var(--nephritis)",
       "quickLinks": [
         {
-          "title": "Adobe Stock",
-          "url": "https://stock.adobe.com/"
+          "title": "Rainmaker Bookings",
+          "url": "https://docs.google.com/spreadsheets/d/1fpGm_ZezuaGa2iI9PCkc_Y1WLpNl7XCjSA8Z4H0TGcU/edit?gid=0#gid=0"
         },
         {
-          "title": "Emojis",
-          "url": "https://emojicopy.com/"
+          "title": "Goldco Creatives",
+          "url": "https://docs.google.com/spreadsheets/d/1UTGdgonpAwiHKYQ5B9N3zj25DXrRpk4I7zcHmlPuXtk/edit?gid=895709536#gid=895709536"
         },
         {
-          "title": "SVG Repo",
-          "url": "https://www.svgrepo.com/"
+          "title": "A2M Bookings",
+          "url": "https://docs.google.com/spreadsheets/d/16HWgzDICOlN6cz5MUsRMfL6epiuuQIKQ/edit?gid=1192968110#gid=1192968110"
         },
         {
           "title": "",
@@ -348,7 +172,43 @@
           "title": "",
           "url": ""
         }
-      ]
+      ],
+      "order": 4
+    },
+    {
+      "id": 8,
+      "icon": "unbounce",
+      "title": "Unbounce",
+      "description": "",
+      "url": "https://app.unbounce.com/5598866/pages",
+      "color": "var(--belize-hole)",
+      "quickLinks": [
+        {
+          "title": "Video Header",
+          "url": "https://app.unbounce.com/4965941/pages/8e32c647-2fd7-4652-94c9-945e25d5c511/overview"
+        },
+        {
+          "title": "Silver Calculator",
+          "url": "https://www.goldcoquiz.com/silver-calculator/"
+        },
+        {
+          "title": "Inflation Calculator",
+          "url": "#"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 5
     },
     {
       "id": 29,
@@ -357,7 +217,7 @@
       "description": "",
       "url": "#",
       "color": "var(--orange)",
-      "order": 10,
+      "order": 6,
       "quickLinks": [
         {
           "title": "Material Colors",
@@ -392,7 +252,7 @@
       "description": "",
       "url": "#",
       "color": "var(--turquoise)",
-      "order": 11,
+      "order": 7,
       "quickLinks": [
         {
           "title": "Zapier",
@@ -419,6 +279,181 @@
           "url": ""
         }
       ]
+    },
+    {
+      "id": 31,
+      "icon": "google-docs",
+      "title": "Google Docs",
+      "description": "",
+      "url": "https://docs.google.com/document/u/0/?tgif=c",
+      "color": "var(--belize-hole)",
+      "order": 8,
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "icon": "poop",
+      "title": "Competitors",
+      "description": "",
+      "url": "https://docs.google.com/spreadsheets/d/1if2q4XmGK-f0e1qPWlyOa1vBty-f0s3fCCrqTQhpacg/edit?gid=0#gid=0",
+      "color": "var(--silver)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 9
+    },
+    {
+      "id": 28,
+      "icon": "picture",
+      "title": "Stock Assets",
+      "description": "",
+      "url": "#",
+      "color": "var(--midnight-blue)",
+      "order": 10,
+      "quickLinks": [
+        {
+          "title": "Adobe Stock",
+          "url": "https://stock.adobe.com/"
+        },
+        {
+          "title": "Emojis",
+          "url": "https://emojicopy.com/"
+        },
+        {
+          "title": "SVG Repo",
+          "url": "https://www.svgrepo.com/"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "icon": "tools",
+      "title": "Miscellaneous Tools",
+      "description": "",
+      "url": "#",
+      "color": "var(--midnight-blue)",
+      "quickLinks": [
+        {
+          "title": "Temporary Phone #",
+          "url": "https://temp-number.com/countries/United-States"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 11
+    },
+    {
+      "id": 14,
+      "icon": "google",
+      "title": "Google",
+      "description": "Quick link to Google Drive",
+      "url": "https://drive.google.com/drive/home",
+      "color": "var(--midnight-blue)",
+      "quickLinks": [
+        {
+          "title": "Google Drive",
+          "url": "https://drive.google.com/drive/home"
+        },
+        {
+          "title": "Gmail",
+          "url": "https://mail.google.com/mail/u/0/#inbox"
+        },
+        {
+          "title": "Google Sheets",
+          "url": "https://docs.google.com/spreadsheets/u/0/?tgif=c"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 12
     }
   ]
 }
