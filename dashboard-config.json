@@ -212,15 +212,15 @@
     },
     {
       "id": 15,
-      "icon": "dashboard",
-      "title": "Temporary Phone #'s",
-      "description": "Get a temporary phone number for testing landing pages and text messages",
-      "url": "https://temp-number.com/countries/United-States",
+      "icon": "tools",
+      "title": "Miscellaneous Tools",
+      "description": "",
+      "url": "#",
       "color": "var(--midnight-blue)",
       "quickLinks": [
         {
-          "title": "",
-          "url": ""
+          "title": "Temporary Phone #",
+          "url": "https://temp-number.com/countries/United-States"
         },
         {
           "title": "",
@@ -244,41 +244,6 @@
         }
       ],
       "order": 6
-    },
-    {
-      "id": 2,
-      "icon": "dashboard",
-      "title": "Creative Generator (v1)",
-      "description": "Automatically generate creatives with proper tracking links",
-      "url": "https://generator.goldcocreatives.com/generate",
-      "color": "var(--turquoise)",
-      "quickLinks": [
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        }
-      ],
-      "order": 7
     },
     {
       "id": 21,
@@ -313,7 +278,7 @@
           "url": ""
         }
       ],
-      "order": 8
+      "order": 7
     },
     {
       "id": 27,
@@ -322,7 +287,7 @@
       "description": "",
       "url": "#",
       "color": "var(--midnight-blue)",
-      "order": 9,
+      "order": 8,
       "quickLinks": [
         {
           "title": "Claude",
@@ -357,7 +322,7 @@
       "description": "",
       "url": "#",
       "color": "var(--midnight-blue)",
-      "order": 10,
+      "order": 9,
       "quickLinks": [
         {
           "title": "Adobe Stock",
@@ -392,7 +357,7 @@
       "description": "",
       "url": "#",
       "color": "var(--orange)",
-      "order": 11,
+      "order": 10,
       "quickLinks": [
         {
           "title": "Material Colors",
