@@ -84,6 +84,10 @@ body {
     background-color: var(--peter-river);
 }
 
+.header-button.save {
+    background-color: var(--orange);
+}
+
 .header-button.hidden {
     display: none;
 }
@@ -100,27 +104,27 @@ body {
     padding: 24px 16px;
 }
 
-/* Dashboard with Masonry Layout */
+/* Dashboard Layout - UPDATED for better masonry layout */
 .dashboard {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Increased width of columns */
+    gap: 20px; /* Increased gap */
     position: relative;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .dashboard {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .dashboard {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
     
     .header-bar {
@@ -135,9 +139,9 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .dashboard {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(300px, 1fr);
     }
 }
 
@@ -152,7 +156,8 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    height: auto; /* Changed from fit-content to auto */
+    width: 100%; /* Ensures the card takes full width of its grid cell */
 }
 
 .tool-card:hover {
@@ -669,6 +674,10 @@ html, body {
 
 .status-message.error {
     background-color: var(--alizarin);
+}
+
+.status-message.info {
+    background-color: var(--peter-river);
 }
 
 .status-message.show {
