@@ -352,7 +352,7 @@
     },
     {
       "id": 28,
-      "icon": "google-sheets",
+      "icon": "files",
       "title": "Stock Assets",
       "description": "",
       "url": "#",
@@ -374,6 +374,41 @@
         {
           "title": "",
           "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "icon": "palette",
+      "title": "Color & Palettes",
+      "description": "",
+      "url": "#",
+      "color": "var(--orange)",
+      "order": 11,
+      "quickLinks": [
+        {
+          "title": "Material Colors",
+          "url": "https://materialui.co/colors"
+        },
+        {
+          "title": "Flat UI Colors",
+          "url": "https://materialui.co/flatuicolors"
+        },
+        {
+          "title": "Tailwind Colors",
+          "url": "https://tailwindcolor.com/"
+        },
+        {
+          "title": "Tint & Shades",
+          "url": "https://maketintsandshades.com/"
         },
         {
           "title": "",
