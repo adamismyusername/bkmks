@@ -257,7 +257,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 25px; /* Offset for drag handle */
+    margin-left: 5px; /* Offset for drag handle */
     position: relative;
     z-index: 1;
 }
