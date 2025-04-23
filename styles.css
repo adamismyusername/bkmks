@@ -210,7 +210,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.2; /* 20% opacity */
+    opacity: 0.3; /* 30% opacity */
     z-index: 0;
 }
 
@@ -275,7 +275,7 @@ body {
 }
 
 .tool-title {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 8px;
     color: var(--wet-asphalt);
