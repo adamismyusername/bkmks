@@ -12,73 +12,115 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- New toolbar -->
-    <div class="toolbar">
-        <h1>Marketing Tools Dashboard</h1>
-        <div class="toolbar-actions">
-            <!-- Login link (shown when not logged in) -->
-            <a href="#" id="adminLoginLink" class="admin-login-link">Admin Login</a>
-            
-            <!-- Admin buttons (hidden until logged in) -->
-            <div id="adminControls" class="admin-controls" style="display: none;">
-                <button id="newToolBtn" class="admin-btn">
-                    <!-- SVG icon instead of material icon -->
-                    <img src="icons_logos/add.svg" class="btn-icon" alt="Add">
-                    New Tool
-                </button>
-                <button id="saveAllChangesBtn" class="admin-btn primary">
-                    <img src="icons_logos/save.svg" class="btn-icon" alt="Save">
-                    Save All Changes
-                </button>
-                <button id="logoutBtn" class="admin-btn secondary">
-                    <img src="icons_logos/logout.svg" class="btn-icon" alt="Logout">
-                    Logout
-                </button>
-            </div>
-        </div>
-    </div>
+    <h1>My Bookmarks</h1>
     
-    <div class="dashboard-container">
-        <div class="dashboard" id="dashboard">
-            <!-- Tool cards will be added here dynamically -->
-        </div>
+    <div class="dashboard" id="dashboard">
+        <!-- Tool cards will be added here dynamically -->
     </div>
 
+    <!-- Admin Panel (hidden by default) -->
     <div id="adminPanel" class="admin-panel" style="display: none;">
         <div class="admin-header">
-            <h2 id="adminPanelTitle">Edit Tool</h2>
+            <h2>Edit Tool</h2>
             <button id="closeAdmin" class="admin-close-btn">×</button>
         </div>
         <div class="admin-content">
             <div class="admin-form">
-                <div class="form-group">
-                    <label for="toolIcon">Icon File:</label>
-                    <input type="text" id="toolIcon" placeholder="filename.svg (from icons_logos folder)">
-                    <div class="icon-preview">
-                        <img src="icons_logos/dashboard.svg" class="preview-icon" alt="Icon Preview">
-                        <small>Preview</small>
+                <div class="main-settings">
+                    <div class="form-group">
+                        <label for="toolTitle">Title:</label>
+                        <input type="text" id="toolTitle" placeholder="Tool Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="toolLink">Link URL:</label>
+                        <input type="text" id="toolLink" placeholder="https://example.com/tool">
+                    </div>
+                    <div class="form-group">
+                        <label for="toolDescription">Description:</label>
+                        <textarea id="toolDescription" placeholder="Tool description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="toolIcon">Icon:</label>
+                        <input type="text" id="toolIcon" placeholder="Icon name">
+                        <div class="icon-preview">
+                            <span class="material-icons">dashboard</span>
+                            <small>Preview</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Color:</label>
+                        <div class="color-options" id="colorOptions">
+                            <!-- Colors will be added dynamically -->
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="toolTitle">Title:</label>
-                    <input type="text" id="toolTitle" placeholder="Tool Title">
-                </div>
-                <div class="form-group">
-                    <label for="toolDescription">Description:</label>
-                    <textarea id="toolDescription" placeholder="Tool description"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="toolLink">Link URL:</label>
-                    <input type="text" id="toolLink" placeholder="https://example.com/tool">
-                </div>
-                <div class="form-group">
-                    <label for="toolColor">Color:</label>
-                    <div class="color-picker" id="colorPicker">
-                        <!-- Color swatches will be added here dynamically -->
+                
+                <div class="quick-links-settings">
+                    <h3>Quick Links</h3>
+                    <div class="quick-link-item">
+                        <div class="form-group">
+                            <label for="quickLink1Title">Quick Link 1 Title:</label>
+                            <input type="text" id="quickLink1Title" placeholder="Link Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="quickLink1Url">Quick Link 1 URL:</label>
+                            <input type="text" id="quickLink1Url" placeholder="https://example.com">
+                        </div>
+                    </div>
+                    <div class="quick-link-item">
+                        <div class="form-group">
+                            <label for="quickLink2Title">Quick Link 2 Title:</label>
+                            <input type="text" id="quickLink2Title" placeholder="Link Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="quickLink2Url">Quick Link 2 URL:</label>
+                            <input type="text" id="quickLink2Url" placeholder="https://example.com">
+                        </div>
+                    </div>
+                    <div class="quick-link-item">
+                        <div class="form-group">
+                            <label for="quickLink3Title">Quick Link 3 Title:</label>
+                            <input type="text" id="quickLink3Title" placeholder="Link Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="quickLink3Url">Quick Link 3 URL:</label>
+                            <input type="text" id="quickLink3Url" placeholder="https://example.com">
+                        </div>
+                    </div>
+                    <div class="quick-link-item">
+                        <div class="form-group">
+                            <label for="quickLink4Title">Quick Link 4 Title:</label>
+                            <input type="text" id="quickLink4Title" placeholder="Link Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="quickLink4Url">Quick Link 4 URL:</label>
+                            <input type="text" id="quickLink4Url" placeholder="https://example.com">
+                        </div>
+                    </div>
+                    <div class="quick-link-item">
+                        <div class="form-group">
+                            <label for="quickLink5Title">Quick Link 5 Title:</label>
+                            <input type="text" id="quickLink5Title" placeholder="Link Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="quickLink5Url">Quick Link 5 URL:</label>
+                            <input type="text" id="quickLink5Url" placeholder="https://example.com">
+                        </div>
+                    </div>
+                    <div class="quick-link-item">
+                        <div class="form-group">
+                            <label for="quickLink6Title">Quick Link 6 Title:</label>
+                            <input type="text" id="quickLink6Title" placeholder="Link Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="quickLink6Url">Quick Link 6 URL:</label>
+                            <input type="text" id="quickLink6Url" placeholder="https://example.com">
+                        </div>
                     </div>
                 </div>
+                
                 <div class="form-actions">
-                    <button id="deleteTool" class="admin-save-btn" style="background-color: var(--alizarin); margin-right: auto;">Delete Tool</button>
+                    <button id="deleteToolBtn" class="admin-delete-btn action-button">Delete Tool</button>
                     <button id="saveToolChanges" class="admin-save-btn action-button">Save Changes</button>
                 </div>
             </div>
@@ -93,10 +135,6 @@
                     <label for="adminPassword">Password:</label>
                     <input type="password" id="adminPassword">
                 </div>
-                <div class="form-group">
-                    <input type="checkbox" id="rememberMe" style="width: auto; margin-right: 8px;">
-                    <label for="rememberMe" style="display: inline;">Remember Me</label>
-                </div>
                 <div class="form-actions">
                     <button id="loginAdmin" class="admin-login-btn">Login</button>
                     <button id="cancelLogin" class="admin-cancel-btn">Cancel</button>
@@ -105,6 +143,7 @@
         </div>
     </div>
 
+    <!-- GitHub Token Panel (hidden by default) -->
     <div id="githubTokenPanel" class="github-token-panel" style="display: none;">
         <div class="admin-header">
             <h2>GitHub Configuration</h2>
@@ -145,9 +184,10 @@
         </div>
     </div>
 
-    <div id="debugToggle" class="debug-toggle" title="Debug Panel">🐞</div>
-    <div id="debugPanel" class="debug-panel"></div>
+    <div id="adminToggle" class="admin-toggle" title="Admin Mode">⚙️</div>
+    <div id="addToolButton" class="add-tool-button hidden" title="Add New Tool">+</div>
 
+    <!-- Status message -->
     <div id="statusMessage" class="status-message"></div>
 
     <!-- Custom scripts -->

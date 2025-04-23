@@ -19,7 +19,6 @@
     --pomegranate: #c0392b;
     --silver: #bdc3c7;
     --asbestos: #7f8c8d;
-    --icon-bg: #ECEFF1;
 }
 
 * {
@@ -34,109 +33,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding: 16px;
 }
 
-/* Toolbar styles */
-.toolbar {
-    background-color: var(--wet-asphalt);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-    height: 70px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.toolbar h1 {
-    font-size: 22px;
-    font-weight: 600;
-    color: white;
-    margin: 0;
-}
-
-.toolbar-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.admin-login-link {
-    color: var(--clouds);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    transition: color 0.2s;
-}
-
-.admin-login-link:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-.admin-controls {
-    display: flex;
-    gap: 12px;
-}
-
-.admin-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--midnight-blue);
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.2s;
-    gap: 6px;
-}
-
-.admin-btn:hover {
-    background-color: var(--belize-hole);
-}
-
-.admin-btn.primary {
-    background-color: var(--peter-river);
-}
-
-.admin-btn.primary:hover {
-    background-color: var(--belize-hole);
-}
-
-.admin-btn.secondary {
-    background-color: var(--asbestos);
-}
-
-.admin-btn.secondary:hover {
-    background-color: var(--concrete);
-}
-
-/* New SVG icon styles */
-.btn-icon {
-    width: 18px;
-    height: 18px;
-}
-
-.tool-svg-icon {
-    width: 28px;
-    height: 28px;
-}
-
-.preview-icon {
-    width: 24px;
-    height: 24px;
-}
-
-.dashboard-container {
-    padding: 24px;
-    flex-grow: 1;
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--wet-asphalt);
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 .dashboard {
@@ -146,6 +51,7 @@ body {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 24px;
 }
 
 @media (max-width: 1200px) {
@@ -158,41 +64,11 @@ body {
     .dashboard {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .toolbar {
-        padding: 0 16px;
-    }
-    
-    .toolbar h1 {
-        font-size: 18px;
-    }
-    
-    .admin-btn {
-        padding: 6px 10px;
-        font-size: 13px;
-    }
-    
-    .btn-icon {
-        width: 16px;
-        height: 16px;
-    }
 }
 
 @media (max-width: 600px) {
     .dashboard {
         grid-template-columns: 1fr;
-    }
-    
-    .toolbar {
-        flex-direction: column;
-        height: auto;
-        padding: 12px 16px;
-        gap: 10px;
-    }
-    
-    .admin-controls {
-        width: 100%;
-        justify-content: center;
     }
 }
 
@@ -225,12 +101,14 @@ body {
     width: 100%;
 }
 
-.tool-content {
+.tool-header {
     padding: 20px;
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    height: 100%;
+    flex-grow: 1;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
 }
 
 .tool-icon {
@@ -241,7 +119,12 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background-color: var(--icon-bg);
+    color: white;
+    font-size: 24px;
+}
+
+.tool-icon span {
+    font-size: 28px;
 }
 
 .tool-info {
@@ -262,22 +145,61 @@ body {
     line-height: 1.4;
 }
 
+.tool-quick-links {
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--belize-hole);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.quick-link:hover {
+    background-color: #e9f5fe;
+}
+
+.quick-link .material-icons {
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+/* Animation for card interaction */
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+    }
 }
 
 .tool-card.pulse {
     animation: pulse 1.5s;
 }
 
+/* For the iframe responsiveness */
 html, body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
 }
 
+/* Tooltip style */
 .tooltip {
     position: absolute;
     background-color: var(--wet-asphalt);
@@ -313,6 +235,7 @@ html, body {
     visibility: visible;
 }
 
+/* Admin panel styles */
 .admin-panel {
     position: fixed;
     top: 50%;
@@ -323,8 +246,10 @@ html, body {
     border-radius: 12px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    width: 400px;
-    max-width: 90vw;
+    width: 800px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .admin-header {
@@ -384,9 +309,13 @@ html, body {
     border-radius: 6px;
 }
 
+.icon-preview .material-icons {
+    font-size: 24px;
+}
+
 .form-actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -403,6 +332,43 @@ html, body {
 
 .admin-save-btn:hover {
     background-color: var(--belize-hole);
+}
+
+.admin-delete-btn {
+    background-color: var(--alizarin);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.admin-delete-btn:hover {
+    background-color: var(--pomegranate);
+}
+
+.admin-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 900;
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.admin-toggle:hover {
+    transform: scale(1.1);
 }
 
 .admin-login-panel {
@@ -447,6 +413,7 @@ html, body {
     background-color: #ddd;
 }
 
+/* When in admin mode, add edit buttons to cards */
 .tool-card.admin-mode {
     position: relative;
 }
@@ -469,15 +436,11 @@ html, body {
     z-index: 5;
 }
 
-.edit-button img {
-    width: 16px;
-    height: 16px;
-}
-
 .tool-card.admin-mode:hover .edit-button {
     opacity: 1;
 }
 
+/* GitHub token panel */
 .github-token-panel {
     position: fixed;
     top: 50%;
@@ -528,6 +491,7 @@ html, body {
     margin-top: 10px;
 }
 
+/* Status Message */
 .status-message {
     position: fixed;
     bottom: 20px;
@@ -557,168 +521,106 @@ html, body {
     visibility: visible;
 }
 
-.color-picker {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    margin-top: 8px;
-}
-
-.color-swatch {
-    width: 100%;
-    height: 36px;
-    border-radius: 6px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.2s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.color-swatch:hover {
-    transform: scale(1.05);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-}
-
-.color-swatch.selected {
-    border-color: var(--wet-asphalt);
-    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--wet-asphalt);
-}
-
-.color-swatch::after {
-    content: "✓";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    opacity: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.color-swatch.selected::after {
-    opacity: 1;
-}
-
-.color-swatch-name {
-    position: absolute;
-    bottom: -24px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 10px;
-    white-space: nowrap;
-    background-color: var(--wet-asphalt);
-    color: white;
-    padding: 2px 6px;
-    border-radius: 3px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s;
-    pointer-events: none;
-}
-
-.color-swatch:hover .color-swatch-name {
-    opacity: 1;
-    visibility: visible;
-}
-
-.tool-card.admin-mode {
-    cursor: move;
-}
-
-.sortable-ghost {
-    opacity: 0.3;
-    background-color: var(--clouds);
-}
-
-.sortable-chosen {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.sortable-drag {
-    opacity: 0.8;
-    transform: scale(1.05);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-
-.drag-handle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: var(--clouds);
-    border-radius: 3px;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: move;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 5;
-}
-
-.drag-handle img {
-    width: 16px;
-    height: 16px;
-    opacity: 0.6;
-}
-
-.tool-card.admin-mode:hover .drag-handle {
-    opacity: 0.8;
-}
-
-/* Save changes button animation */
-.admin-btn.saving {
-    pointer-events: none;
-    opacity: 0.8;
-    background-color: var(--nephritis);
-}
-
+/* Loading Spinner */
 .loading-spinner {
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 2px solid rgba(255,255,255,.3);
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
     border-radius: 50%;
     border-top-color: #fff;
     animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
 }
 
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
 
-/* Debug panel styles */
-.debug-panel {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    background-color: white;
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Enhanced Edit Tool Panel */
+.admin-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.admin-form .main-settings {
+    grid-column: 1;
+}
+
+.admin-form .quick-links-settings {
+    grid-column: 2;
+    background-color: #f8f9fa;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    max-width: 400px;
-    z-index: 1000;
-    display: none;
-    font-family: monospace;
-    font-size: 12px;
-    max-height: 300px;
-    overflow-y: auto;
 }
 
-.debug-panel.show {
-    display: block;
+.quick-links-settings h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--wet-asphalt);
 }
 
-.debug-toggle {
+.quick-link-item {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.quick-link-item:last-child {
+    border-bottom: none;
+}
+
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.color-option {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    box-shadow: 0 0 0 3px white, 0 0 0 5px #000;
+}
+
+.form-actions {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Add Tool button */
+.add-tool-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 80px;
     width: 40px;
     height: 40px;
-    background-color: var(--midnight-blue);
+    background-color: var(--emerald);
+    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -728,5 +630,12 @@ html, body {
     z-index: 900;
     font-size: 20px;
     transition: transform 0.3s;
-    color: white;
+}
+
+.add-tool-button:hover {
+    transform: scale(1.1);
+}
+
+.add-tool-button.hidden {
+    display: none;
 }
