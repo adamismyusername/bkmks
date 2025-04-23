@@ -6,7 +6,34 @@
       "title": "Salesforce",
       "description": "Goldco's main CRM for leads, campaigns, and sales",
       "url": "https://goldco.my.salesforce.com/home/home.jsp",
-      "color": "var(--nephritis)"
+      "color": "var(--nephritis)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 0
     },
     {
       "id": 22,
@@ -14,7 +41,34 @@
       "title": "Monday.com",
       "description": "Project Manager for Goldco",
       "url": "https://goldco-force.monday.com/",
-      "color": "var(--wisteria)"
+      "color": "var(--wisteria)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 1
     },
     {
       "id": 8,
@@ -22,15 +76,69 @@
       "title": "Unbounce",
       "description": "This is where most of Goldco's landing pages are hosted",
       "url": "https://app.unbounce.com/5598866/pages",
-      "color": "var(--belize-hole)"
+      "color": "var(--belize-hole)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 2
     },
     {
       "id": 26,
-      "icon": "integration_instructions",
+      "icon": "google-sheets",
       "title": "Google | Sheets",
       "description": "",
       "url": "https://docs.google.com/spreadsheets/u/0/?tgif=c",
-      "color": "var(--nephritis)"
+      "color": "var(--nephritis)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 3
     },
     {
       "id": 33,
@@ -38,7 +146,34 @@
       "title": "Salesforce MC",
       "description": "Salesforce Marketing Cloud (SFMC) main marketing platform",
       "url": "https://mck3qzddmyzrqj4h3nxgbgq76y90.login.exacttarget.com/hub-cas/login",
-      "color": "var(--nephritis)"
+      "color": "var(--nephritis)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 4
     },
     {
       "id": 24,
@@ -46,7 +181,34 @@
       "title": "BeeFree Pro",
       "description": "Drag and drop editor for email design, layout, and coding",
       "url": "https://beefree.io/app/590652/572321/projects",
-      "color": "var(--amethyst)"
+      "color": "var(--amethyst)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 5
     },
     {
       "id": 14,
@@ -54,7 +216,34 @@
       "title": "Google Drive",
       "description": "Quick link to Google Drive",
       "url": "https://drive.google.com/drive/home",
-      "color": "var(--wisteria)"
+      "color": "var(--wisteria)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 6
     },
     {
       "id": 16,
@@ -62,7 +251,34 @@
       "title": "Creatopy",
       "description": "An app that can quickly create multiple sizes, layouts and versions of banner ads",
       "url": "https://auth.creatopy.com/auth/realms/creatopy/protocol/openid-connect/auth",
-      "color": "var(--belize-hole)"
+      "color": "var(--belize-hole)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 7
     },
     {
       "id": 15,
@@ -70,7 +286,34 @@
       "title": "Temporary Phone #'s",
       "description": "Get a temporary phone number for testing landing pages and text messages",
       "url": "https://temp-number.com/countries/United-States",
-      "color": "var(--midnight-blue)"
+      "color": "var(--midnight-blue)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 8
     },
     {
       "id": 2,
@@ -78,7 +321,34 @@
       "title": "Creative Generator (v1)",
       "description": "Automatically generate creatives with proper tracking links",
       "url": "https://generator.goldcocreatives.com/generate",
-      "color": "var(--turquoise)"
+      "color": "var(--turquoise)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 9
     },
     {
       "id": 1,
@@ -86,7 +356,34 @@
       "title": "Creative Generator (4 in 1)",
       "description": "Updates all links in the the 4 in 1 creative with values entered into the form fields. ",
       "url": "https://adamismyusername.github.io/4in1/",
-      "color": "var(--turquoise)"
+      "color": "var(--turquoise)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 10
     },
     {
       "id": 21,
@@ -94,7 +391,34 @@
       "title": "Competitors",
       "description": "A list of competitors, their websites, landing pages and more. *Access requires management approval.",
       "url": "https://docs.google.com/spreadsheets/d/1if2q4XmGK-f0e1qPWlyOa1vBty-f0s3fCCrqTQhpacg/edit?gid=0#gid=0",
-      "color": "var(--silver)"
+      "color": "var(--silver)",
+      "quickLinks": [
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ],
+      "order": 11
     }
   ]
 }
