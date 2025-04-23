@@ -104,15 +104,15 @@ body {
     padding: 24px 16px;
 }
 
-/* Dashboard Layout - UPDATED for better masonry layout */
+/* Dashboard Layout */
 .dashboard {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: repeat(4, minmax(400px, 1fr)); /* Increased width of columns */
-    gap: 20px; /* Increased gap */
+    grid-template-columns: repeat(4, minmax(400px, 1fr)); 
+    gap: 20px;
     position: relative;
 }
 
@@ -145,7 +145,7 @@ body {
     }
 }
 
-/* Tool Card */
+/* Tool Card - UPDATED DESIGN */
 .tool-card {
     background-color: white;
     border-radius: 12px;
@@ -156,8 +156,8 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: auto; /* Changed from fit-content to auto */
-    width: 100%; /* Ensures the card takes full width of its grid cell */
+    height: auto;
+    width: 100%;
 }
 
 .tool-card:hover {
@@ -188,15 +188,30 @@ body {
 .card-color-band {
     height: 6px;
     width: 100%;
+    display: none; /* Hidden in new design */
 }
 
+/* NEW TOOL HEADER DESIGN */
 .tool-header {
     padding: 20px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
     cursor: pointer;
-    border-bottom: 1px solid #eee;
+    /* Remove border-bottom and add background with opacity */
+    border-bottom: none;
+    position: relative;
+}
+
+/* Add background with opacity for tool header */
+.tool-header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1; /* 10% opacity */
+    z-index: 0;
 }
 
 .drag-handle {
@@ -243,6 +258,8 @@ body {
     align-items: center;
     justify-content: center;
     margin-left: 25px; /* Offset for drag handle */
+    position: relative;
+    z-index: 1;
 }
 
 .tool-icon img {
@@ -253,6 +270,8 @@ body {
 
 .tool-info {
     flex-grow: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .tool-title {
@@ -269,7 +288,7 @@ body {
     line-height: 1.4;
 }
 
-/* Modified Quick Links to 2 columns, 3 rows */
+/* Modified Quick Links */
 .tool-quick-links {
     padding: 12px 16px;
     display: grid;
