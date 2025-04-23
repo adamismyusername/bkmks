@@ -218,8 +218,8 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
