@@ -111,7 +111,7 @@ body {
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Increased width of columns */
+    grid-template-columns: repeat(4, minmax(400px, 1fr)); /* Increased width of columns */
     gap: 20px; /* Increased gap */
     position: relative;
 }
