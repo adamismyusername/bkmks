@@ -19,6 +19,7 @@
     --pomegranate: #c0392b;
     --silver: #bdc3c7;
     --asbestos: #7f8c8d;
+    --header-bg: #263238;
 }
 
 * {
@@ -33,15 +34,68 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 16px;
 }
 
-h1 {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--wet-asphalt);
-    text-align: center;
-    margin-bottom: 24px;
+/* New Header Bar */
+.header-bar {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-title h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.header-button {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.header-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.header-button.admin {
+    background-color: var(--emerald);
+}
+
+.header-button.add {
+    background-color: var(--peter-river);
+}
+
+.header-button.hidden {
+    display: none;
+}
+
+.header-button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.dashboard-container {
+    flex: 1;
+    padding: 24px 16px;
 }
 
 .dashboard {
@@ -63,6 +117,17 @@ h1 {
 @media (max-width: 900px) {
     .dashboard {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header-bar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+    
+    .header-controls {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -144,10 +209,11 @@ h1 {
     line-height: 1.4;
 }
 
+/* Modified Quick Links to 2 columns, 3 rows */
 .tool-quick-links {
     padding: 12px 16px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
 }
 
@@ -268,15 +334,43 @@ html, body {
 }
 
 .admin-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.admin-form .main-settings {
+    grid-column: 1;
+}
+
+.admin-form .quick-links-settings {
+    grid-column: 2;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.quick-links-settings h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--wet-asphalt);
+}
+
+.quick-link-item {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.quick-link-item:last-child {
+    border-bottom: none;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-bottom: 12px;
 }
 
 .form-group label {
@@ -312,10 +406,34 @@ html, body {
     height: 24px;
 }
 
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.color-option {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    box-shadow: 0 0 0 3px white, 0 0 0 5px #000;
+}
+
 .form-actions {
+    grid-column: 1 / span 2;
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .admin-save-btn {
@@ -346,28 +464,6 @@ html, body {
 
 .admin-delete-btn:hover {
     background-color: var(--pomegranate);
-}
-
-.admin-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 900;
-    font-size: 20px;
-    transition: transform 0.3s;
-}
-
-.admin-toggle:hover {
-    transform: scale(1.1);
 }
 
 .admin-login-panel {
@@ -552,94 +648,6 @@ html, body {
     cursor: not-allowed;
 }
 
-/* Enhanced Edit Tool Panel */
-.admin-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.admin-form .main-settings {
-    grid-column: 1;
-}
-
-.admin-form .quick-links-settings {
-    grid-column: 2;
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.quick-links-settings h3 {
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: var(--wet-asphalt);
-}
-
-.quick-link-item {
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #eee;
-}
-
-.quick-link-item:last-child {
-    border-bottom: none;
-}
-
-.color-options {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    margin-top: 10px;
-}
-
-.color-option {
-    width: 100%;
-    aspect-ratio: 1;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.color-option:hover {
-    transform: scale(1.1);
-}
-
-.color-option.selected {
-    box-shadow: 0 0 0 3px white, 0 0 0 5px #000;
-}
-
-.form-actions {
-    grid-column: 1 / span 2;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-/* Add Tool button */
-.add-tool-button {
-    position: fixed;
-    bottom: 20px;
-    right: 80px;
-    width: 40px;
-    height: 40px;
-    background-color: var(--emerald);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 900;
-    font-size: 20px;
-    transition: transform 0.3s;
-}
-
-.add-tool-button:hover {
-    transform: scale(1.1);
-}
-
-.add-tool-button.hidden {
+.hidden {
     display: none;
 }

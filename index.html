@@ -8,10 +8,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Your Custom Tools Dashboard</h1>
+     <!-- New Header Bar -->
+     <div class="header-bar">
+        <div class="header-title">
+            <h1>Your Marketing Tools Dashboard</h1>
+        </div>
+        <div class="header-controls">
+            <button id="adminLoginBtn" class="header-button">
+                <span class="material-icons">Admin Login</span>
+            </button>
+            <button id="addToolBtn" class="header-button add hidden">
+                <span class="material-icons">Add Tool</span>
+            </button>
+        </div>
+    </div>
     
-    <div class="dashboard" id="dashboard">
-        <!-- Tool cards will be added here dynamically -->
+    <div class="dashboard-container">
+        <div class="dashboard" id="dashboard">
+            <!-- Tool cards will be added here dynamically -->
+        </div>
     </div>
 
     <!-- Admin Panel (hidden by default) -->
@@ -179,9 +194,6 @@
             </div>
         </div>
     </div>
-
-    <div id="adminToggle" class="admin-toggle" title="Admin Mode">⚙️</div>
-    <div id="addToolButton" class="add-tool-button hidden" title="Add New Tool">+</div>
 
     <!-- Status message -->
     <div id="statusMessage" class="status-message"></div>
