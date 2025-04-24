@@ -1,4 +1,4 @@
-        // GitHub integration settings
+// GitHub integration settings
         let githubSettings = {
             username: 'adamismyusername',
             repo: 'sfdash',
@@ -650,7 +650,7 @@
                 branch
             };
 
-            // Store in localStorage (but never store the token in plain text in production)
+            // Store in localStorage
             try {
                 localStorage.setItem('githubUsername', username);
                 localStorage.setItem('githubRepo', repo);
@@ -664,6 +664,7 @@
                 loadConfigFromGitHub();
             } catch (e) {
                 console.warn('localStorage not available (likely due to sandbox restrictions)');
+                showStatusMessage('Settings updated but could not be stored persistently', 'info');
                 // Changes will still be visible but won't persist after page refresh in sandboxed environments
             }
         }
@@ -731,6 +732,18 @@
             }
         });
 
+        // GitHub Login button event listener
+        document.getElementById('githubLoginBtn').addEventListener('click', function() {
+            // Populate the GitHub settings form with current values
+            document.getElementById('githubUsername').value = githubSettings.username || '';
+            document.getElementById('githubRepo').value = githubSettings.repo || '';
+            document.getElementById('githubToken').value = githubSettings.token || '';
+            document.getElementById('githubBranch').value = githubSettings.branch || 'main';
+            
+            // Show GitHub token panel
+            document.getElementById('githubTokenPanel').style.display = 'block';
+        });
+
         // Close admin login panel
         document.getElementById('cancelLogin').addEventListener('click', function() {
             document.getElementById('adminLoginPanel').style.display = 'none';
@@ -784,8 +797,8 @@
             document.getElementById('addToolBtn').classList.add('hidden');
             document.getElementById('saveOrderBtn').classList.add('hidden');
             document.getElementById('saveChangesBtn').classList.add('hidden');
-            
-            // If changes were made but not saved, prompt user
+
+	// If changes were made but not saved, prompt user
             if (unsavedChanges) {
                 if (confirm('You have unsaved changes. Do you want to save them before exiting admin mode?')) {
                     saveChanges();
