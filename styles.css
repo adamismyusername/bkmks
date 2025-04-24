@@ -228,7 +228,7 @@ body {
 
 /* NEW TOOL HEADER DESIGN */
 .tool-header {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     gap: 16px;
