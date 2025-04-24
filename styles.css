@@ -48,14 +48,26 @@ body {
     z-index: 100;
 }
 
+.header-left {
+    min-width: 150px; /* Match width with header-controls for balance */
+}
+
+.header-title {
+    text-align: center;
+    flex-grow: 1;
+}
+
 .header-title h1 {
     font-size: 24px;
     font-weight: 600;
+    margin: 0;
 }
 
 .header-controls {
     display: flex;
     gap: 12px;
+    min-width: 150px; /* Match width with header-left for balance */
+    justify-content: flex-end;
 }
 
 .header-button {
@@ -74,6 +86,15 @@ body {
 
 .header-button:hover {
     background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* GitHub Login Button */
+.header-button.github {
+    background-color: #333;
+}
+
+.header-button.github:hover {
+    background-color: #2b3137;
 }
 
 .header-button.admin {
@@ -128,14 +149,28 @@ body {
     }
     
     .header-bar {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 12px;
         padding: 12px;
     }
     
-    .header-controls {
+    .header-left, .header-title, .header-controls {
         width: 100%;
+        min-width: auto;
         justify-content: center;
+        text-align: center;
+    }
+    
+    .header-left {
+        order: 1;
+    }
+    
+    .header-title {
+        order: 0;
+    }
+    
+    .header-controls {
+        order: 2;
     }
 }
 
