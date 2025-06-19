@@ -386,6 +386,41 @@
       ]
     },
     {
+      "id": 32,
+      "icon": "tools-custom.svg",
+      "title": "My Custom Tools",
+      "description": "Links to the custom tools, apps and widgets I have created",
+      "url": "#",
+      "color": "var(--belize-hole)",
+      "order": 11,
+      "quickLinks": [
+        {
+          "title": "Silver Calculator (Inline)",
+          "url": "https://www.goldcoquiz.com/free-silver-calculator-inline/"
+        },
+        {
+          "title": "4in1 Creative Generator",
+          "url": "https://adamismyusername.github.io/4in1/"
+        },
+        {
+          "title": "CSV Editor",
+          "url": "https://adamismyusername.github.io/csveditor/"
+        },
+        {
+          "title": "Date Image",
+          "url": "https://adamismyusername.github.io/date-image/"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ]
+    },
+    {
       "id": 15,
       "icon": "tools",
       "title": "Miscellaneous Tools",
@@ -418,7 +453,7 @@
           "url": ""
         }
       ],
-      "order": 11
+      "order": 12
     },
     {
       "id": 14,
@@ -453,7 +488,7 @@
           "url": ""
         }
       ],
-      "order": 12
+      "order": 13
     }
   ]
 }
