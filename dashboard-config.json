@@ -489,6 +489,41 @@
         }
       ],
       "order": 13
+    },
+    {
+      "id": 33,
+      "icon": "art",
+      "title": "Inspiration | Design",
+      "description": "",
+      "url": "#",
+      "color": "var(--pomegranate)",
+      "order": 14,
+      "quickLinks": [
+        {
+          "title": "Landbook",
+          "url": "https://land-book.com/"
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        },
+        {
+          "title": "",
+          "url": ""
+        }
+      ]
     }
   ]
 }
